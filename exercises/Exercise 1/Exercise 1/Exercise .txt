@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Exercise_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are going to find the circumference and area of a circle");
+
+            // Enter the Radius
+            Console.WriteLine("Enter the radius");
+            string radius = Console.ReadLine();
+            double r1 = double.Parse(radius);
+
+            // Multiply the radius by 2pi
+            double circumference = 2 * Math.PI * r1;
+
+            // Muliply pi by the radius squared
+            double area = Math.PI * r1 * r1;
+
+            // Display the answers to user
+            Console.WriteLine($"The circumference is {circumference}");
+            Console.WriteLine($"The area is {area}");
+
+            // Writeline for volume
+
+            Console.WriteLine("Find the volume of a Hemisphere");
+
+            // Enter the radius of the hemisphere
+            Console.WriteLine("Enter the radius of the hemisphere");
+            string radius2 = Console.ReadLine();
+            double r2 = double.Parse(radius2);
+
+            //Calculate the volume
+            double volume = ((Math.PI * (r2 * r2 * r2)) * 4 / 3) / 2;
+
+            //display the volume
+            Console.WriteLine($"The volume of the hemisphere is {volume}");
+
+            // Writeline for Area of a Triangle
+            Console.WriteLine("We will find the area of a triangle");
+
+            // Enter side 1 - side 3
+            Console.WriteLine("Enter Side 1");
+            string side1 = Console.ReadLine();
+            int s1 = int.Parse(side1);
+
+            Console.WriteLine("Enter Side 2");
+            string side2 = Console.ReadLine();
+            int s2 = int.Parse(side2);
+
+            Console.WriteLine("Enter Side 3");
+            string side3 = Console.ReadLine();
+            int s3 = int.Parse(side3);
+
+            // Use Heron's formula to find the area of a triangle
+            float p = (s1 + s2 + s3) / 2;
+            double area2 = Math.Sqrt((p * (p - s1) * (p - s2) * (p - s3))); 
+
+            // Display the Area found with Heron's formula
+            Console.WriteLine($"The area of the triangle is {area2}");
+
+            // Writeline for Quadratic Equation
+            Console.WriteLine("We will solve a quadratic equation in terms of x");
+
+            // Enter a,b,c
+            Console.WriteLine("Enter a");
+            string variable1 = Console.ReadLine();
+            double a = double.Parse(variable1);
+            Console.WriteLine("Enter b");
+            string variable2 = Console.ReadLine();
+            double b = double.Parse(variable2);
+            Console.WriteLine("Enter c");
+            string variable3 = Console.ReadLine();
+            double c = double.Parse(variable3);
+
+
+
+            // Solve formula using variables
+            double x = (-b + Math.Sqrt((b * b) - 4 * a * c)) / (2 * a);
+            double negx = (-b - Math.Sqrt((b * b) - 4 * a * c)) / (2 * a);
+
+            // Display Results
+            Console.WriteLine($"The answer when adding is {x}");
+            Console.WriteLine($"The answer when subtracting is {negx}");
+
+
